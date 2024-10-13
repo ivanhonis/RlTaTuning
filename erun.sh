@@ -12,13 +12,13 @@ read -p "Do you want to run TRADE_SERVER_FUTURES.py in the background? (y/n): " 
 
 if [ "$choice" = "y" ]; then
   echo --------------------------------------
-  echo RUN TRADE_SERVER_FUTURES IN BACKGROUND
+  echo RUN RL_trades_server.py IN BACKGROUND
   echo --------------------------------------
-  nohup python3 -u TRADE_SERVER_FUTURES.py > output.log 2>&1 &
+  nohup python3 -u RL_trades_server.py > output.log 2>&1 &
 else
   echo --------------------------------------
   echo RUN FCS
   echo --------------------------------------
-  python3 TRADE_SERVER_FUTURES.py
+  python3 RL_trades_server.py
 fi
 
